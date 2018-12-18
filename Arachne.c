@@ -148,7 +148,7 @@ void Arachne_step(uint8_T byte)
     if (rtDW.count >= 23U) {
       /* Transition: '<S1>:763' */
       rtDW.data[rtDW.count] = rtb_SerialReceive1;
-      CheckSum = (uint8_T)SumData(rtDW.data, 0, 21);
+      CheckSum = (uint8_T)SumData(rtDW.data, 0, 22);
       if (CheckSum == rtDW.data[23]) {
         /* Transition: '<S1>:765' */
         rtDW.message_id = rtDW.data[1];
